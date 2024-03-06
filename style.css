@@ -1,0 +1,165 @@
+:root {
+  --color-primary: #bf91f9;
+  --color-secondry: #97edaa;
+  --color-third: #f9b091;
+  --color-fourth: #f3f3f3;
+  --color-fifth: #fff;
+  --color-sixth: #fdde90;
+
+  --txt-color-1: #191919;
+  --txt-color-2: #f9b091;
+  --txt-color-3: #97edaa;
+
+  --border-radius: 2rem;
+}
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  /* 1rem = 10px */
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+
+  overflow-x: hidden;
+}
+
+.container {
+  max-width: 80%;
+  margin: 0 auto;
+}
+
+.main-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  margin: 10rem auto;
+  color: #fff;
+
+  /* height: 50rem; */
+  grid-template-rows: 50rem;
+}
+
+.left-side {
+  display: grid;
+  align-content: center;
+  gap: 3rem;
+
+  padding: 2rem;
+  border-radius: 2rem;
+  background: var(--color-fourth);
+
+  span {
+    font-size: 2vw;
+    color: var(--color-primary);
+  }
+
+  h1 {
+    font-size: 8vw;
+    color: var(--txt-color-1);
+  }
+
+  p {
+    max-width: 60%;
+    color: var(--txt-color-1);
+    line-height: 1.4;
+    font-size: 1.2rem;
+  }
+}
+
+.right-side {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+
+  grid-template-rows: repeat(4, 1fr);
+  /* grid-template-rows: repeat(4, 50px); */
+  /* grid-auto-rows: 50px; */
+  gap: 1rem;
+
+  border-radius: 2rem;
+}
+
+.img-contaoner-1 {
+  grid-column: span 3;
+  grid-row: span 3;
+
+  max-width: 100%;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 2rem;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.empty-div-right {
+  grid-row: span 3;
+
+  background: var(--color-secondry);
+  border-radius: 2rem;
+}
+
+.img-contaoner-2 {
+  background: var(--color-primary);
+  border-radius: 2rem;
+
+  max-width: 100%;
+  height: 100%;
+  overflow: hidden;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  img {
+    width: 50%;
+    height: 50%;
+    object-fit: cover;
+  }
+}
+
+.empty-div-bottom {
+  grid-column: span 3;
+
+  background: var(--color-third);
+  border-radius: 2rem;
+}
+
+/* RWD */
+
+@media only screen and (max-width: 952px) {
+  .main-container {
+    margin-top: 15rem;
+    grid-template-rows: 40rem;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .main-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: unset;
+
+    margin-top: 5rem;
+  }
+
+  .left-side {
+    span {
+      font-size: 3vw;
+      color: var(--color-primary);
+    }
+
+    h1 {
+      font-size: 12vw;
+    }
+  }
+}
