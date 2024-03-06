@@ -32,7 +32,7 @@ body {
 }
 
 .container {
-  max-width: 80%;
+  max-width: 75%;
   margin: 0 auto;
 }
 
@@ -77,8 +77,9 @@ body {
 .right-side {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 4fr 1fr;
 
-  grid-template-rows: repeat(4, 1fr);
+  /* grid-template-rows: repeat(4, 1fr); */
   /* grid-template-rows: repeat(4, 50px); */
   /* grid-auto-rows: 50px; */
   gap: 1rem;
@@ -88,7 +89,8 @@ body {
 
 .img-contaoner-1 {
   grid-column: span 3;
-  grid-row: span 3;
+  grid-row: span 1;
+  /* grid-row: span 3; */
 
   max-width: 100%;
   height: 100%;
@@ -103,7 +105,7 @@ body {
 }
 
 .empty-div-right {
-  grid-row: span 3;
+  /* grid-row: span 3; */
 
   background: var(--color-secondry);
   border-radius: 2rem;
@@ -124,7 +126,7 @@ body {
   img {
     width: 50%;
     height: 50%;
-    object-fit: cover;
+    object-fit: fill;
   }
 }
 
@@ -137,7 +139,7 @@ body {
 
 /* RWD */
 
-@media only screen and (max-width: 952px) {
+@media only screen and (max-width: 1000px) {
   .main-container {
     margin-top: 15rem;
     grid-template-rows: 40rem;
